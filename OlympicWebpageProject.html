@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <style>
+
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+      }
+
+      .nav {
+        background-color: rgba(254, 6, 6, 0.3);
+        float: left;
+        list-style-type: none;
+        margin-left: 10px;
+        margin-right: 5px;
+        text-align: center;
+        width: 10%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid rgb(254, 6, 6);
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        transition: background-color 0.3s;
+      }
+
+      .nav:hover{
+        background-color: rgba(254, 6, 6, 1);
+        box-shadow: 0 4px 8px 4px rgba(254, 6, 6, 0.3), 0 6px 20px 0 rgba(254, 6, 6, 0.3);
+      }
+
+      .nav:active{
+        background-color: rgba(254, 6, 6, 0.3);
+      }
+
+      li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      h1{
+        text-align: center;
+        clear: both;
+        background-color: rgba(38, 38, 38, 0.5);
+        box-sizing: border-box;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin-right: 10%;
+        margin-left: 10%;
+        box-shadow: 0 4px 8px 4px rgba(38, 38, 38, 0.5), 0 6px 20px 0 rgba(38, 38, 38, 0.5);
+      }
+
+      .Sports {
+        background-color: rgba(38, 38, 38, 0.5);
+        float: left;
+        width: 19%;
+        height: 560px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        border: 1px solid white;
+        box-sizing: border-box;
+        line-height: 22px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 8px 4px rgba(38, 38, 38, 0.5), 0 6px 20px 0 rgba(38, 38, 38, 0.5);
+        text-align: center;
+      }
+
+      .Qualifiers {
+        background-color: rgba(38, 38, 38, 0.5);
+        float: left;
+        width: 19%;
+        height: 10%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        border: 1px solid white;
+        box-sizing: border-box;
+        line-height: 15px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .Previous-Winners {
+        background-color: rgba(38, 38, 38, 0.5);
+        float: left;
+        width: 19%;
+        height: 500px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        border: 1px solid white;
+        box-sizing: border-box;
+        line-height: 30px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 8px 4px rgba(38, 38, 38, 0.5), 0 6px 20px 0 rgba(38, 38, 38, 0.5);
+        text-align: center;
+      }
+
+      .Bronze {
+        background-color: rgba(127, 96, 0, 0.3);
+        border: 1px solid rgb(127, 96, 0);
+        float: left;
+        width: 19%;
+        height: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        box-sizing: border-box;
+        line-height: 22px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px 4px rgba(127, 96, 0, 0.2), 0 6px 20px 0 rgba(127, 96, 0, 0.19);
+      }
+
+      .Silver {
+        background-color: rgba(192, 192, 192, 0.3);
+        border: 1px solid rgb(192, 192, 192);
+        float: left;
+        width: 19%;
+        height: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left:  5%;
+        box-sizing: border-box;
+        line-height: 22px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px 4px rgba(192, 192, 192, 0.2), 0 6px 20px 0 rgba(192, 192, 192, 0.19);
+      }
+
+      .Gold {
+        background-color: rgba(157, 133, 5, 0.3);
+        border: 1px solid rgb(255, 215, 0);
+        float: left;
+        width: 19%;
+        height:300px;
+        margin-top: 10px;
+        margin-left: 5%;
+        box-sizing: border-box;
+        line-height: 22px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px 4px rgba(255, 215, 0, 0.2), 0 6px 20px 0 rgba(255, 215, 0, 0.19);
+      }
+
+      .btt {
+        background-color: rgba(254, 6, 6, 0.3);
+        border: 1px solid rgba(254, 6, 6, 1);
+        width: 150px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        text-decoration:none;
+        color:white;
+        cursor: pointer;
+        transition: 0.3s;
+        clear: both;
+        float: left;
+        margin-left: 46.5%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .btt:hover {
+        background-color: rgb(254, 6, 6);
+        box-shadow: 0 4px 8px 4px rgba(254, 6, 6, 0.3), 0 6px 20px 0 rgba(254, 6, 6, 0.3);
+      }
+
+      .btt:active {
+        background-color: rgba(254, 6, 6, 0.3);
+      }
+
+      footer {
+        background-color: rgba(38, 38, 38, 0.5);
+        float: left;
+        clear: both;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+    </style>
+    <title>Olympic Webpage Project</title>
+  </head>
+  <body> 
+    <header>
+      <ul id="top">
+        <li class="nav"><a href="#sports">Sports</a></li>
+        <li class="nav"><a href="#Qualifiers">Qualifiers</a></li>
+        <li class="nav"><a href="#Previous Winners">Previous Winners</a></li>
+        <li class="nav"><a href="#Medalists">Medalists</a></li>
+      </ul>
+      <img src="Olympics.png" alt="Olympics Logo" style="border-radius: 50%; float: left;
+      height: 42px; width: 42px; margin-left: 45%;">
+      <h1>Olympic Webpage Project</h1>
+    </header>
+    <main>
+      <div>
+        <section class="Sports">
+          <h2>Rifle Shooting</h2>
+          <img src="" alt="" style="">
+          <p><strong>Description&#58;</strong> Olympic shooting is a precision sport where athletes compete to hit targets with firearms, testing their accuracy, focus, and technique</p>
+          <p><strong>Rules&#58;<br> <br></strong>
+            <strong>Disciplines&#58;</strong> Rifle, Pistol, and Shotgun.<br>
+            <strong>Scoring&#58;</strong> Based on accuracy; hit targets to score points.<br>
+            <strong>Format&#58;</strong> Qualifying rounds lead to finals.<br>
+            <strong>Shooting Positions&#58;</strong>  Varies by event—standing, prone, or kneeling.<br>
+            <strong>Targets&#58;</strong> Fixed or moving, depending on the discipline.
+          </p>
+        </section>
+        <section class="Sports">
+          <h2>Fencing</h2>
+          <p><strong>Description&#58;</strong> There are 12 events in Olympic fencing, with three types of weapon used&#58; foil, épée and sabre.</p>
+          <p><strong>Rules&#58;</strong><br><br>
+            <strong>Scoring&#58;</strong> Points for touches on valid areas; first to a set number or most points wins.<br>
+            <strong>Right of Way&#58;</strong> In Foil and Sabre, the attacker has priority if both score simultaneously.<br>
+            <strong> Gear&#58;</strong> Full protective gear is required.<br>
+            <strong>Match Format&#58;</strong> Three periods of three minutes or until one fencer scores 15 points.<br>
+            <strong>Penalties&#58;</strong> Yellow (warning), Red (point loss), Black (disqualification)
+          </p>
+        </section>
+        <section class="Sports">
+          <h2>Archery</h2>
+          <p><strong>Description&#58;</strong> involves shooting arrows at a target 70 meters away. The target has 10 concentric rings, with the innermost circle worth 10 points. Archers compete individually or in teams, aiming to score the highest points</p>
+          <p><strong>Rules&#58;</strong></p>
+          <p>
+            <strong>Rounds&#58;</strong> Archers shoot 6 arrows per set in a match.<br>
+            <strong>Scoring&#58;</strong> The highest score per arrow is 10 points.<br>
+            <strong>Match Format&#58;</strong> Individual matches are best of 5 sets; first to 6 points wins. Team matches are based on the total score over 4 ends<br>
+            <strong>Tie&#58;</strong> In a tie, a single arrow shoot-off decides the winner, with the closest to the center winning.<br>
+          </p>
+        </section>
+        <section class="Sports" id="sports">
+          <h2>Weight Lifting</h2>
+          <p><strong>Description</strong> involves lifting the heaviest weights in two styles: the Snatch and the Clean & Jerk. Athletes compete in different weight categories.</p>
+          <p><strong>Rules&#58;</strong></p>
+          <p>
+            <strong>Lifts&#58;</strong> Each athlete gets 3 attempts in both Snatch and Clean & Jerk. <br>
+            <strong>Scoring&#58;</strong> The best successful lift in each style is combined for a total score.<br>
+            <strong>Winning&#58;</strong> The athlete with the highest total score in their weight category wins.<br>
+            <strong>Tie&#58;</strong> In case of a tie, the lifter with the lower body weight wins.<br>
+          </p>
+        </section>
+      </div>
+      <div>
+        <section class="Qualifiers">
+          <h2>Qualifiers</h2>
+            <p> China </p>
+            <p> United States</p>
+            <p> Italy</p>
+            <p> South Korea</p>
+            <p> France</p>
+          </ul>
+          <img src="1Q.png" alt="" style="height: 300px; width: 300px;">
+        </section>
+
+        <section class="Qualifiers">
+          <h2>Qualifiers</h2>
+            <p> Japan</p>
+            <p> United States</p>
+            <p> Italy</p>
+            <p> South Korea</p>
+            <p> France</p>
+          <img src="Q2.png" alt="" style="height: 300px; width: 300px;">
+        </section>
+
+        <section class="Qualifiers">
+          <h2>Qualifiers</h2>
+            <p> China</p>
+            <p> Brazil</p>
+            <p> Australia</p>
+            <p> Canada</p>
+            <p> Taiwan</p>
+          <img src="Q3.png" alt="" style="height: 300px; width: 300px;">
+        </section>
+
+        <section class="Qualifiers" id="Qualifiers">
+          <h2>Qualifiers</h2>
+            <p> United States</p>
+            <p> China</p>
+            <p> France</p>
+            <p> Japan</p>
+            <p> Iran</p>
+          <img src="Q4.png" alt="" style="height: 300px; width: 300px;">
+        </section>
+      </div>
+      <div>
+        <section class="Previous-Winners">
+          <h2>Previous Winners</h2>
+          <p>
+            2021 - China<br>
+            2016 - China<br>
+            2012 - China<br>
+            2008 - China<br>
+            2004 - Italy<br>
+          </p>
+        </section>
+
+        <section class="Previous-Winners">
+          <h2>Previous Winners</h2>
+          <p>
+            2021 - Italy<br>
+            2016 - Italy<br>
+            2012 - Italy<br>
+            2008 - France<br>
+            2004 - Italy<br>
+          </p>
+        </section>
+
+        <section class="Previous-Winners">
+          <h2>Previous Winners</h2>
+          <p>
+            2021 - South Korea<br>
+            2016 - South Korea<br>
+            2012 - South Korea<br>
+            2008 - South Korea<br>
+            2004 - Italy<br>
+          </p>
+        </section>
+
+        <section class="Previous-Winners" id="Previous Winners">
+          <h2>Previous Winners</h2>
+          <p>
+            2021 - China<br>
+            2016 - China<br>
+            2012 - China<br>
+            2008 - China<br>
+            2004 - China<br>
+          </p>
+        </section>
+      </div>
+      <div>
+        <section class="Bronze" id="Medalists">
+          <h2>Bronze</h2>
+          <img src="B1.png" alt="" style="height:auto; width:auto;">
+          <span style="font-size: 13px;"><p>Federico Nilo Maldini & Paolo Monna</p></span>
+          <h4>Italy</h4>
+        </section>
+
+        <section class="Bronze">
+          <h2>Bronze</h2>
+          <img src="" alt="" style="">
+          <h4>United States</h4>
+        </section>
+
+        <section class="Bronze">
+          <h2>Bronze</h2>
+          <img src="" alt="" style="">
+          <h4>Italy</h4>
+        </section>
+
+        <section class="Bronze">
+          <h2>Bronze</h2>
+          <img src="" alt="" style="">
+          <h4>Thailand</h4>
+        </section>
+
+        <section class="Silver">
+          <h2>Silver</h2>
+          <img src="S1.png" alt="" style="width: auto; height:auto ;">
+          <span style="font-size: 13px;"><p>Keum Ji-hyeon & Park ha jun</p></span>
+          <h4>South Korea</h4>
+        </section>
+
+        <section class="Silver">
+          <h2>Silver</h2>
+          <img src="" alt="" style="">
+          <h4>France</h4>
+        </section>
+
+        <section class="Silver">
+          <h2>Silver</h2>
+          <img src="" alt="" style="">
+          <h4>U.S</h4>
+        </section>
+
+        <section class="Silver">
+          <h2>Silver</h2>
+          <img src="" alt="" style="">
+          <h4>Turkey</h4>
+        </section>
+
+        <section class="Gold">
+          <h2>Gold</h2>
+          <img src="G1.png" alt="" style="width: 300; height:100 ;">
+          <span style="font-size: 13px;"><p>Huang Yuting & Sheng Lihao</p></span>
+          <h4>China</h4>
+        </section>
+
+        <section class="Gold">
+          <h2>Gold</h2>
+          <img src="" alt="" style="">
+          <h4>Japan</h4>
+        </section>
+
+        <section class="Gold">
+          <h2>Gold</h2>
+          <img src="" alt="" style="">
+          <h4>South Korea</h4>
+        </section>
+
+        <section class="Gold">
+          <h2>Gold</h2>
+          <img src="" alt="" style="">
+          <h4>China</h4>
+        </section>
+      </div>
+      <a href="#Top" class="btt">Back To Top</a>
+    </main>
+  </body>
+  <footer>
+    <p>&copy; Martinez Publications</p>
+  </footer>
+</html>
